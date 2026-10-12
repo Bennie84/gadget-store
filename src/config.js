@@ -16,6 +16,7 @@ const config = {
       name: "iPhone 13",
       brand: "Apple",
       price: 450000,
+      dealPrice: 405000,
       featured: true,
       image:
         "https://res.cloudinary.com/mvnnk6jh/image/upload/v1789594688/doxlore/uploads/c6zz4qf0ulnvjwezf5ib.avif",
@@ -35,6 +36,7 @@ const config = {
       name: "iPhone 14 Pro",
       brand: "Apple",
       price: 850000,
+      dealPrice: 765000,
       featured: true,
       image:
         "https://res.cloudinary.com/mvnnk6jh/image/upload/c_limit,w_640,q_auto/v1789594531/doxlore/uploads/zrgbrgsweosbrhtohuei.avif",
@@ -47,6 +49,7 @@ const config = {
       name: "Samsung Galaxy S23",
       brand: "Samsung",
       price: 720000,
+      dealPrice: 648000,
       featured: true,
       image:
         "https://res.cloudinary.com/mvnnk6jh/image/upload/v1789591480/doxlore/uploads/idrdbxgytaf1mrjtfdkk.avif",

@@ -10,9 +10,17 @@ function Home({ setPage, onView }) {
         <p className="hero-eyebrow">Thoughtful picks. Fair, honest prices.</p>
         <h1>{config.storeName}</h1>
         <p>{config.tagline}</p>
-        <button className="cta" onClick={() => setPage("catalogue")}>
-          Browse Phones
-        </button>
+        <div className="hero-actions">
+          <button className="cta" onClick={() => setPage("catalogue")}>
+            Browse Phones
+          </button>
+          <button
+            className="cta cta-secondary"
+            onClick={() => setPage("deals")}
+          >
+            View Hot Deals
+          </button>
+        </div>
       </section>
 
       <section className="trust">

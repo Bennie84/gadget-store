@@ -20,6 +20,13 @@ function Navbar({ page, setPage, theme, setTheme }) {
         </button>
 
         <button
+          className={page === "deals" ? "active" : ""}
+          onClick={() => setPage("deals")}
+        >
+          Deals
+        </button>
+
+        <button
           className="theme-btn"
           type="button"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

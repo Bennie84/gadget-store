@@ -3,12 +3,14 @@ import config from "./config";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Catalogue from "./pages/Catalogue";
+import Deals from "./pages/Deals";
 import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   const [page, setPage] = useState("home");
   const [theme, setTheme] = useState(config.defaultTheme);
   const [selected, setSelected] = useState(null);
+  const [previousPage, setPreviousPage] = useState("catalogue");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -24,6 +26,7 @@ function App() {
   }
 
   function onView(product) {
+    setPreviousPage(page);
     setSelected(product);
     setPage("details");
     window.scrollTo(0, 0);
@@ -34,11 +37,15 @@ function App() {
   }
 
   function onBuy(product) {
+    const price = product.dealPrice ?? product.price;
+    const offer = product.dealPrice ? " (hot deal)" : "";
+
     openWhatsApp(
       "Hi, I want to buy the " +
         product.name +
+        offer +
         " for ₦" +
-        product.price.toLocaleString(),
+        price.toLocaleString(),
     );
   }
 
@@ -48,10 +55,12 @@ function App() {
 
       {page === "home" && <Home setPage={setPage} onView={onView} />}
       {page === "catalogue" && <Catalogue onView={onView} />}
+      {page === "deals" && <Deals onView={onView} />}
       {page === "details" && selected && (
         <ProductDetails
           product={selected}
           setPage={setPage}
+          backPage={previousPage === "details" ? "catalogue" : previousPage}
           onBuy={onBuy}
           onEnquire={onEnquire}
         />

@@ -1,10 +1,18 @@
 import PhoneImage from "../components/PhoneImage";
 
-function ProductDetails({ product, setPage, onBuy, onEnquire }) {
+function ProductDetails({ product, setPage, backPage, onBuy, onEnquire }) {
+  const hasDeal = product.dealPrice < product.price;
+  const backLabel =
+    backPage === "deals"
+      ? "← Back to deals"
+      : backPage === "home"
+        ? "← Back home"
+        : "← Back to phones";
+
   return (
     <div className="section">
-      <button className="back" onClick={() => setPage("catalogue")}>
-        ← Back to phones
+      <button className="back" onClick={() => setPage(backPage)}>
+        {backLabel}
       </button>
 
       <div className="details-layout">
@@ -12,7 +20,19 @@ function ProductDetails({ product, setPage, onBuy, onEnquire }) {
 
         <div className="details-info">
           <h1>{product.name}</h1>
-          <p className="price big">₦{product.price.toLocaleString()}</p>
+          {hasDeal ? (
+            <div className="details-deal-price">
+              <span className="deal-badge">10% OFF</span>
+              <span className="price-was">
+                ₦{product.price.toLocaleString()}
+              </span>
+              <p className="price big">
+                ₦{product.dealPrice.toLocaleString()}
+              </p>
+            </div>
+          ) : (
+            <p className="price big">₦{product.price.toLocaleString()}</p>
+          )}
           <p>{product.description}</p>
 
           <h3>Specifications</h3>
