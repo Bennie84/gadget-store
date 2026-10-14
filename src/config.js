@@ -13,7 +13,7 @@ const config = {
   products: [
     {
       id: 1,
-      name: "iPhone 13",
+      name: "Iphone 13",
       brand: "Apple",
       price: 450000,
       dealPrice: 405000,
@@ -35,7 +35,7 @@ const config = {
     },
     {
       id: 2,
-      name: "iPhone 14 Pro",
+      name: "Iphone 14 Pro",
       brand: "Apple",
       price: 850000,
       dealPrice: 765000,
@@ -67,7 +67,7 @@ const config = {
     },
     {
       id: 4,
-      name: "IPone 16",
+      name: "Iphone 16",
       brand: "Apple",
       price: 1300000,
       featured: false,
@@ -81,7 +81,7 @@ const config = {
     },
     {
       id: 5,
-      name: "IPhone 17ProMax",
+      name: "Iphone 17ProMax",
       brand: "Apple",
       price: 4000000,
       featured: false,
