@@ -15,7 +15,12 @@ function Deals({ onView }) {
 
       <div className="grid">
         {deals.map((product) => (
-          <ProductCard key={product.id} product={product} onView={onView} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            onView={onView}
+            showDealDescription
+          />
         ))}
       </div>
     </section>

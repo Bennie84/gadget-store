@@ -1,6 +1,6 @@
 import PhoneImage from "./PhoneImage";
 
-function ProductCard({ product, onView }) {
+function ProductCard({ product, onView, showDealDescription = false }) {
   const hasDeal = product.dealPrice < product.price;
 
   return (
@@ -11,6 +11,9 @@ function ProductCard({ product, onView }) {
       </div>
       <h3>{product.name}</h3>
       <p>{product.brand}</p>
+      {showDealDescription && (
+        <p className="deal-description">{product.dealDescription}</p>
+      )}
       {hasDeal ? (
         <p className="price price-deal">
           <span className="price-was">₦{product.price.toLocaleString()}</span>

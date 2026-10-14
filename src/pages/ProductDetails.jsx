@@ -33,7 +33,7 @@ function ProductDetails({ product, setPage, backPage, onBuy, onEnquire }) {
           ) : (
             <p className="price big">₦{product.price.toLocaleString()}</p>
           )}
-          <p>{product.description}</p>
+          <p>{hasDeal ? product.dealDescription : product.description}</p>
 
           <h3>Specifications</h3>
           <ul>

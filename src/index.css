@@ -326,6 +326,17 @@ input:focus-visible {
   text-decoration: line-through;
 }
 
+.deal-description {
+  min-height: 4.5em;
+  padding: 10px 11px;
+  border-left: 3px solid var(--brand);
+  border-radius: 0 8px 8px 0;
+  background: var(--surface-raised);
+  color: var(--text) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.5;
+}
+
 .price-deal strong {
   color: var(--brand);
 }

@@ -22,6 +22,8 @@ const config = {
         "https://res.cloudinary.com/mvnnk6jh/image/upload/v1789594688/doxlore/uploads/c6zz4qf0ulnvjwezf5ib.avif",
       description:
         "A smooth, reliable iPhone with a great camera. Perfect for daily use.",
+      dealDescription:
+        "Face ID is not working. Battery health is 89%; please review the condition before purchase.",
       specs: [
         "6.1-inch display",
         "128GB storage",
@@ -29,7 +31,7 @@ const config = {
         "12MP dual camera",
       ],
       battery: "89%",
-      condition: "UK Used - Good working condition",
+      condition: "UK Used - Face ID not working",
     },
     {
       id: 2,
@@ -40,9 +42,11 @@ const config = {
       featured: true,
       image:
         "https://res.cloudinary.com/mvnnk6jh/image/upload/c_limit,w_640,q_auto/v1789594531/doxlore/uploads/zrgbrgsweosbrhtohuei.avif",
+      dealDescription:
+        "Battery health is 80%. Please review the condition before purchase.",
       specs: ["6.1-inch display", "256GB storage", "6GB RAM", "48MP camera"],
-      battery: "92%",
-      condition: "UK Used - Excellent condition",
+      battery: "80%",
+      condition: "UK Used - 80% battery health",
     },
     {
       id: 3,
@@ -55,9 +59,11 @@ const config = {
         "https://res.cloudinary.com/mvnnk6jh/image/upload/v1789591480/doxlore/uploads/idrdbxgytaf1mrjtfdkk.avif",
       description:
         "Fast Samsung flagship with a bright screen and strong battery.",
+      dealDescription:
+        "The back is broken. Battery health is 90%; please review the condition before purchase.",
       specs: ["6.1-inch display", "256GB storage", "8GB RAM", "50MP camera"],
       battery: "90%",
-      condition: "Brand new - Sealed",
+      condition: "Used - broken back",
     },
     {
       id: 4,
